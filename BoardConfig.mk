@@ -51,7 +51,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Kernel
-TARGET_PREBUILT_KERNEL := device/samsung/d1q/prebuilt/Image-dtb
+TARGET_PREBUILT_KERNEL := device/samsung/gts6l/prebuilt/Image-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_APPEND_DTB := true
@@ -77,11 +77,11 @@ BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Recovery
-TARGET_OTA_ASSERT_DEVICE := d1q
+TARGET_OTA_ASSERT_DEVICE := gts6l
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_RECOVERY_FSTAB := device/samsung/d1q/recovery/root/etc/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/samsung/gts6l/recovery/root/etc/recovery.fstab
 
 # Android Verified Boot
 BOARD_AVB_ENABLE := false
