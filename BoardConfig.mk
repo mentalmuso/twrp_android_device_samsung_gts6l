@@ -51,7 +51,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Kernel
-TARGET_PREBUILT_KERNEL := device/samsung/d1q/prebuilt/Image-dtb
+TARGET_PREBUILT_KERNEL := device/samsung/gts6l/prebuilt/Image-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_APPEND_DTB := true
@@ -73,15 +73,18 @@ QCOM_BOARD_PLATFORMS += msmnile
 # Partitions (userdata ??)
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
+# System as root
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+
 # Workaround for error copying vendor files to recovery ramdisk
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Recovery
-TARGET_OTA_ASSERT_DEVICE := d1q
+TARGET_OTA_ASSERT_DEVICE := gts6l
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_RECOVERY_FSTAB := device/samsung/d1q/recovery/root/etc/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/samsung/gts6l/recovery/root/etc/recovery.fstab
 
 # Android Verified Boot
 BOARD_AVB_ENABLE := false
@@ -96,9 +99,7 @@ TW_INCLUDE_FBE := true
 # TWRP
 TW_DEVICE_VERSION := 3_mentalmuso
 RECOVERY_VARIANT := twrp
-TW_THEME := portrait_hdpi
-TW_Y_OFFSET := 143
-TW_H_OFFSET := -143
+TW_THEME := landscape_hdpi
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
@@ -108,6 +109,8 @@ TW_DEFAULT_BRIGHTNESS := 15000
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_INCLUDE_NTFS_3G := true
+RECOVERY_TOUCHSCREEN_SWAP_XY := true
+RECOVERY_TOUCHSCREEN_FLIP_Y := true
 TW_EXCLUDE_SUPERSU := true
 TW_USE_NEW_MINADBD := true
 TW_EXTRA_LANGUAGES := true
